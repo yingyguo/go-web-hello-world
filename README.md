@@ -241,7 +241,11 @@ ___
 
 #### Kubeadm init(install the default version)
 
+    #swapoff -a (disable swap)
     #kubeadm init --apiserver-advertise-address=10.0.2.15 --pod-network-cidr=192.168.0.0/16
+    
+    Permanently disable swap
+    #Modify the /etc/fstab  to remove the part of swap
     
 #### Install calico
 
@@ -260,6 +264,7 @@ ___
 
 #### Configure master to deploy pod
 
+    remove node's taint
     #kubectl taint nodes --all node-role.kubernetes.io/master-
 
 ___
