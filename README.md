@@ -200,7 +200,8 @@ ___
     #docker push goguo/go-web-hello-world:v0.1
     
     You can access it via the following link：
-    [https://hub.docker.com/repository/docker/goguo/go-web-hello-world](https://hub.docker.com/repository/docker/goguo/go-web-hello-world "悬停显示")
+    https://hub.docker.com/repository/docker/goguo/go-web-hello-world
+    
 
 ___
 ### Task 8: document the procedure in a MarkDown file
@@ -285,8 +286,8 @@ ___
     if there are disk related values in Taints, and error shows "failed to garbage collect required amount of images. Wanted to free..."
         Please check if you have enough disk space.
         To increase the Ubuntu disk space, please refer to：
-        [https://blog.csdn.net/ouyang_peng/article/details/53261599](https://blog.csdn.net/ouyang_peng/article/details/53261599 "悬停显示")
-        [https://blog.csdn.net/xatuo007/article/details/100733796](https://blog.csdn.net/xatuo007/article/details/100733796 "悬停显示")
+        https://blog.csdn.net/ouyang_peng/article/details/53261599
+        https://blog.csdn.net/xatuo007/article/details/100733796
  
 ___
 ### Task 11: install kubernetes dashboard and expose the service to nodeport 31081
