@@ -41,6 +41,7 @@ Ubuntu create user is : ezguoyi
 
 Configure the port forwarding required above...
 
+___
 ### Task 1: Update system
 *ssh to guest machine from host machine ($ ssh user@localhost -p 2222) and update the system to the latest*
 *https://help.ubuntu.com/16.04/serverguide/apt.html*
@@ -70,7 +71,8 @@ Configure the port forwarding required above...
     If Guru Meditation error occurs in virtualbox after reboot, Please try to restart your computer.
     If ubuntu keeps hanging on " a start job is running for dev-mapper-cryptswap1.device ... ", try to restart Ubuntu through the VirtualBox interface,
     select recovery mode to access Ubuntu for repair.
-
+    
+___
 ### Task 2: install gitlab-ce version in the host
 
 *https://about.gitlab.com/install/#ubuntu?version=ce*
@@ -91,6 +93,7 @@ Configure the port forwarding required above...
 If you do not modify the gitlab port, the file in the repo will be linked to port 80 when you access the gitlab file from the host browser,
 resulting in file access failure.
 
+___
 ### Task 3: create a demo group/project in gitlab
 
 *named demo/go-web-hello-world (demo is group name, go-web-hello-world is project name).*
@@ -117,6 +120,7 @@ resulting in file access failure.
 Create golang hello-world project(go-web-hello-world), Omit here....
 Modify the listening port to 8081 in main.go...
 
+___
 ### Task 4: build the app and expose ($ go run) the service to 8081 port
 
     #mkdir demo & cd demo
@@ -127,6 +131,7 @@ Modify the listening port to 8081 in main.go...
     You can visit http://127.0.0.1:8081 through the host browser.
     you will get "Hello, you've requested: /".
     
+___
 ### Task 5: install docker    
 *https://docs.docker.com/install/linux/docker-ce/ubuntu/*
 
@@ -142,6 +147,7 @@ Modify the listening port to 8081 in main.go...
     #sudo usermod -aG docker ezguoyi(Add ezguoyi user to docker group)
     #newgrp docker (update group)
     
+___
 ### Task 6: run the app in container
 
 *build a docker image ($ docker build) for the web app and run that in a container ($ docker run), expose the service to 8082 (-p)*
@@ -181,7 +187,8 @@ Modify the listening port to 8081 in main.go...
     (Since port 8082 is used by sidekiq, I use port 8083)
     You can visit http://127.0.0.1:8082 through the host browser.
     you will get "Hello, you've requested: /".
-    
+
+___
 ### Task 7: push image to dockerhub
 
 *tag the docker image using your_dockerhub_id/go-web-hello-world:v0.1 and push it to docker hub (https://hub.docker.com/)*
@@ -193,13 +200,15 @@ Modify the listening port to 8081 in main.go...
     #docker push goguo/go-web-hello-world:v0.1
     
     You can access it via the following link：
-    [https://hub.docker.com/repository/docker/goguo/go-web-hello-world](https://hub.docker.com/repository/docker/goguo/go-web-hello-world)
-        
+    [https://hub.docker.com/repository/docker/goguo/go-web-hello-world](https://hub.docker.com/repository/docker/goguo/go-web-hello-world "悬停显示")
+
+___
 ### Task 8: document the procedure in a MarkDown file
 *create a README.md file in the gitlab repo and add the technical procedure above (0-7) in this file*
 
 ......
 
+___
 ### Task 9: install a single node Kubernetes cluster using kubeadm
 
 *https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/*
@@ -253,6 +262,7 @@ Modify the listening port to 8081 in main.go...
 
     #kubectl taint nodes --all node-role.kubernetes.io/master-
 
+___
 ### Task 10: deploy the hello world container
 
 *in the kubernetes above and expose the service to nodePort 31080*
@@ -275,9 +285,10 @@ Modify the listening port to 8081 in main.go...
     if there are disk related values in Taints, and error shows "failed to garbage collect required amount of images. Wanted to free..."
         Please check if you have enough disk space.
         To increase the Ubuntu disk space, please refer to：
-        [https://blog.csdn.net/ouyang_peng/article/details/53261599](https://blog.csdn.net/ouyang_peng/article/details/53261599)
-        [https://blog.csdn.net/xatuo007/article/details/100733796](https://blog.csdn.net/xatuo007/article/details/100733796)
-    
+        [https://blog.csdn.net/ouyang_peng/article/details/53261599](https://blog.csdn.net/ouyang_peng/article/details/53261599 "悬停显示")
+        [https://blog.csdn.net/xatuo007/article/details/100733796](https://blog.csdn.net/xatuo007/article/details/100733796 "悬停显示")
+ 
+___
 ### Task 11: install kubernetes dashboard and expose the service to nodeport 31081
 
 *https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/*
@@ -285,7 +296,8 @@ Modify the listening port to 8081 in main.go...
 
     #kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta8/aio/deploy/recommended.yaml
     #kubectl proxy --address=0.0.0.0  --port=31081 &
-    
+
+___
 ### Task 12: generate token for dashboard login in task 11
 *figure out how to generate token to login to the dashboard and publish the procedure to the gitlab.*
 
@@ -298,7 +310,7 @@ Modify the listening port to 8081 in main.go...
     #kubectl describe secret cluster-dashboard-demo-token-mwspb 
     Copy the token field to the login page
     
-    
+___    
 #### Dashboard
 
 ![k8s dashboard](https://github.com/yingyguo/go-web-hello-world/blob/master/dashboard.PNG)
