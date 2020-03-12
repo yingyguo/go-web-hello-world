@@ -31,7 +31,7 @@ The configuration is as follows：
 
     * 4 CPUs (k8s requires at least 2 CPUs)
     * 8GB of Memory (at least 2 GB)
-    * 80GB of Virtual Size 
+    * 80GB of Virtual Size (Not enough space will cause k8s pod to fail to start)
     * Nat Mode
     
 The setup step is omitted here...
