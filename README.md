@@ -10,20 +10,18 @@ ____
 *either in a physical machine or a virtual machine*
 
 *http://releases.ubuntu.com/16.04/<br>*
+
 *http://releases.ubuntu.com/16.04/ubuntu-16.04.6-server-amd64.iso<br>*
+
 *https://www.virtualbox.org/*
 
 *for VM, use NAT network and forward required ports to host machine*
-
 *- 22->2222 for ssh*
-
 *- 80->8080 for gitlab*
-
 *- 8081/8082->8081/8082 for go app*
-
 *- 31080/31081->31080/31081 for go app in k8s*
 
-####Device:
+#### Device:
 
     virtualbox6.0
     
@@ -302,6 +300,8 @@ Modify the listening port to 8081 in main.go...
     
     
 #### Dashboard
+
+![k8s dashboard](https://github.com/yingyguo/go-web-hello-world/blob/master/dashboard.PNG)
 
     
 
