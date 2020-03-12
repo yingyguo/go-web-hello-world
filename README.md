@@ -199,10 +199,9 @@ ___
     #docker tag go-web-hello-world:v0.1 goguo/go-web-hello-world:v0.1
     #docker push goguo/go-web-hello-world:v0.1
     
-    You can access it via the following link：
+You can access it via the following link：
     https://hub.docker.com/repository/docker/goguo/go-web-hello-world
     
-
 ___
 ### Task 8: document the procedure in a MarkDown file
 *create a README.md file in the gitlab repo and add the technical procedure above (0-7) in this file*
@@ -285,9 +284,11 @@ ___
     #kubectl describe node  ubuntu-guo-test
     if there are disk related values in Taints, and error shows "failed to garbage collect required amount of images. Wanted to free..."
         Please check if you have enough disk space.
-        To increase the Ubuntu disk space, please refer to：
-        https://blog.csdn.net/ouyang_peng/article/details/53261599
-        https://blog.csdn.net/xatuo007/article/details/100733796
+        
+To increase the Ubuntu disk space, please refer to：
+    https://blog.csdn.net/ouyang_peng/article/details/53261599
+    
+    https://blog.csdn.net/xatuo007/article/details/100733796
  
 ___
 ### Task 11: install kubernetes dashboard and expose the service to nodeport 31081
